@@ -1,72 +1,82 @@
 {
-  "name": "SkyDash_admin",
-  "version": "1.2.1",
-  "description": "",
-  "main": "index.html",
-  "dependencies": {
-    "@mdi/font": "^3.6.95",
-    "ace-builds": "^1.2.9",
-    "bootstrap": "^4.5.0",
-    "bootstrap-datepicker": "^1.9.0",
-    "bootstrap-maxlength": "1.6.0",
-    "chart.js": "^2.8.0",
-    "clipboard": "^2.0.4",
-    "codemirror": "^5.47.0",
-    "colcade": "^0.2.0",
-    "datatables.net": "^1.10.19",
-    "datatables.net-bs4": "^1.10.19",
-    "flag-icon-css": "^3.3.0",
-    "font-awesome": "4.7.0",
-    "gulp-sourcemaps": "^2.6.3",
-    "inputmask": "^4.0.8",
-    "jquery": "^3.4.1",
-    "jquery-asColorPicker": "0.4.4",
-    "jquery-bar-rating": "1.2.2",
-    "jquery-contextmenu": "^2.8.0",
-    "jquery-file-upload": "^4.0.11",
-    "merge-stream": "^2.0.0",
-    "moment": "^2.24.0",
-    "nouislider": "^13.1.5",
-    "owl-carousel-2": "0.0.3",
-    "perfect-scrollbar": "^1.4.0",
-    "popper.js": "^1.15.0",
-    "progressbar.js": "1.0.1",
-    "puse-icons-feather": "^1.1.0",
-    "pwstabs": "1.4.0",
-    "quill": "^1.3.6",
-    "raphael": "^2.2.8",
-    "rickshaw": "^1.6.6",
-    "select2": "^4.0.7",
-    "select2-bootstrap-theme": "0.1.0-beta.10",
-    "simplemde": "1.11.2",
-    "summernote": "^0.8.12",
-    "sweetalert": "^2.1.2",
-    "tempusdominus-bootstrap-4": "^5.1.2",
-    "ti-icons": "^0.1.2",
-    "tinymce": "^5.0.8",
-    "twbs-pagination": "1.4.1",
-    "typeahead.js": "^0.11.1",
-    "x-editable": "^1.5.1"
-  },
-  "devDependencies": {
-    "browser-sync": "^2.16.0",
-    "compass-mixins": "^0.12.10",
-    "del": "^4.1.1",
-    "gulp": "^4.0.2",
-    "gulp-concat": "^2.6.1",
-    "gulp-inject": "^5.0.2",
-    "gulp-inject-partials": "^1.0.3",
-    "gulp-rename": "^1.2.2",
-    "gulp-replace": "^1.0.0",
-    "gulp-sass": "^4.0.2",
-    "minimatch": "^3.0.4",
-    "node-sass": "^4.12.0"
-  },
+  "name": "@moesaid/cleopatra",
+  "version": "1.1.1",
+  "description": "cleopatra admin dashboard template built especially for developers",
+  "author": "Mohamed Said , moesaid.com",
+  "license": "MIT",
+  "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "gulp",
+    "build": "gulp build",
+    "git": "git add . && git commit -m",
+    "postgit": "git push -u origin master && git subtree push --prefix dist origin gh-pages"    
   },
-  "author": "bootstrapdash",
-  "url": "http://www.bootstrapdash.com/",
-  "copyright": "",
-  "license": ""
+  "options": {
+    "config": {
+      "tailwindjs": "./tailwind.config.js"
+    },
+    "paths": {
+      "root": "./",
+      "src": {
+        "base": "./src",
+        "css": "./src/css",
+        "js": "./src/js",
+        "img": "./src/img"
+      },
+      "dist": {
+        "base": "./dist",
+        "css": "./dist/css",
+        "js": "./dist/js",
+        "img": "./dist/img"
+      },
+      "build": {
+        "base": "./build",
+        "css": "./build/css",
+        "js": "./build/js",
+        "img": "./build/img"
+      }
+    }
+  },
+  "keywords": [
+    "cleopatra",
+    "gulp",
+    "tailwind",
+    "tailwindcss",
+    "admin",
+    "dashboard",
+    "admin dashboard",
+    "admin themes",
+    "sass",
+    "admin dashboard template"
+  ],
+  "devDependencies": {
+    "autoprefixer": "^9.7.6",
+    "browser-sync": "^2.26.3",
+    "del": "^3.0.0",
+    "gulp": "^4.0.0",
+    "gulp-cache": "^1.1.3",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-file-include": "^2.2.2",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-markdown": "^5.0.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-purgecss": "^1.1.1",
+    "gulp-purify-css": "^0.1.0",
+    "gulp-purifycss": "^0.2.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sass-glob": "^1.1.0",
+    "gulp-uglify": "^3.0.1",
+    "gulp-webp": "^4.0.1",
+    "lodash.template": ">=4.5.0",
+    "log-symbols": "^2.2.0",
+    "mem": "^6.1.0",
+    "purifycss-extended": "^1.3.6",
+    "tailwindcss": "^1.4.6",
+    "tailwindcss-animatecss": "^0.2.7"
+  },
+  "dependencies": {
+    "chart.js": "^2.9.3"
+  }
 }
